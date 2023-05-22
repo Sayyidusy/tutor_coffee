@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Wakey.HeadlineLarge.Bold" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/bevietnam_bold</item>
+        <item name="android:textSize">@dimen/text_56sp</item>
+    </style>
+    <style name="TextAppearance.Wakey.BodyLarge.Bold" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/bevietnam_bold</item>
+        <item name="android:textSize">@dimen/text_24sp</item>
+    </style>
+    <style name="TextAppearance.Wakey.BodyMedium.Regular" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/bevietnam_regular</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.Wakey.LabelMedium.Bold" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/bevietnam_bold</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.Wakey.LabelMedium.Regular" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/bevietnam_regular</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.Wakey.LabelSmall.Regular" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/bevietnam_regular</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+</resources>
