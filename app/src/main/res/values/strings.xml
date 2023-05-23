@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">tutorCoffee</string>
     <string name="title_selector">BrewMaster</string>
-    <string name="desc_title">Your ultimate solution for a\nperfect cup of coffee every\ntime!</string>
+    <string name="desc_title">Your ultimate solution for a perfect\n cup of coffee every time!</string>
 
     <string name="welcome_landing">Hey,Welcome Back !!</string>
+    <string name="create_account">Create\nNew Account</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="get_started">Get Started</string>
     <string name="sign_in">Sign In</string>
-    <string name="sign_up">Dont have an account? Sign Up Here!!</string>
+    <string name="desc_signup">Dont have an account? Sign Up Here!!</string>
     <string name="forgot">Forgot Password ?</string>
     <string name="type_email">Type your email.. </string>
     <string name="type_password">Type your password.. </string>

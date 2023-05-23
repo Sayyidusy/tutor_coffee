@@ -5,8 +5,7 @@
     android:viewportWidth="314"
     android:viewportHeight="644">
   <path
-      android:pathData="M0,0h314v644h-314z"
-      android:fillColor="url(#pattern0)"/>
+      android:pathData="M0,0h314v644h-314z"/>
   <path
       android:pathData="M0,0h314v644h-314z">
     <aapt:attr name="android:fillColor">

@@ -12,6 +12,9 @@
     <color name="gray_accent">#383838</color>
     <color name="green_primary">#033E38</color>
     <color name="brown_primary">#A25A2E</color>
+    <color name="brown_secondary">#A8836B</color>
     <color name="cream_primary">#D7BC9F</color>
-    <color name="black_primary">#272727</color>
+    <color name="dark_cream">#A64B2A</color>
+    <color name="dark_coffee">#272727</color>
+    <color name="cream_bg">#FFF0DE</color>
 </resources>

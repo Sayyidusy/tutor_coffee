@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/coffee">
+    android:background="@color/cream_bg">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -31,7 +31,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/title_selector"
         android:textColor="@color/white"
         android:textSize="@dimen/margin_32dp"
         android:textStyle="bold"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="@string/desc_onboard"
+        android:text="@string/desc_title"
         android:textColor="@color/white"
         android:textSize="@dimen/margin_16dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_getstarted"
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:background="@drawable/button_splash"
-        android:text="@string/SignIn"
+        android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.Wakey.LabelMedium.Bold"
         android:textColor="@color/white"
