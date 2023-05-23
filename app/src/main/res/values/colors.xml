@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF6332</color>
-    <color name="coffee">#DE9F7B</color>
+    <color name="coffee">#FFF0DE</color>
     <color name="gray_accent">#383838</color>
+    <color name="button_coffee">#A64B2A</color>
+    <color name="coffe_cream">#A8836B</color>
 </resources>

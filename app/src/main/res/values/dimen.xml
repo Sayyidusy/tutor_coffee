@@ -3,6 +3,8 @@
     <dimen name="text_56sp">56sp</dimen>
     <dimen name="text_24sp">24sp</dimen>
     <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="text_35sp">35sp</dimen>
     <dimen name="text_14sp">14sp</dimen>
 
     <dimen name="size_340dp">340dp</dimen>
@@ -12,7 +14,12 @@
     <dimen name="width_172dp">172dp</dimen>
     <dimen name="width_130dp">130dp</dimen>
     <dimen name="width_72dp">72dp</dimen>
+    <dimen name="width_64dp">64dp</dimen>
+    <dimen name="width_257dp">257dp</dimen>
+    <dimen name ="width_657dp">657dp</dimen>
     <dimen name="width_265dp">265dp</dimen>
+    <dimen name="width_383dp">383dp</dimen>
+    <dimen name="width_483dp">483dp</dimen>
 
     <dimen name="margin_128dp">128dp</dimen>
     <dimen name="margin_112dp">112dp</dimen>

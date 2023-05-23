@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">tutorCoffee</string>
+    <string name="app_name">BrewMaster</string>
     <string name="title_selector">BrewMaster</string>
     <string name="desc_title">Your ultimate solution for a\nperfect cup of coffee every\ntime!</string>
+    <string name="jenis_kopi">AEROPRESS COFFEE BREWING</string>
+    <string name="get_started">Get Started</string>
+    <string name="SignIn">Sign In</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="desc_onboard">Your ultimate solution for a perfect\ncup of coffee every time!</string>
+    <string name="title_signin">Hey,\nWelcome Back !!</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="type_email">Type your email</string>
+    <string name="type_password">Type your password</string>
+    <string name="another_account">Dont have an account? Sign Up Here!!</string>
+    <string name="title_signup">Create\nNew Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_account">Already have an account? Sign In Here!!</string>
+    <string name="type_confirm">Confirm your password</string>
 </resources>
