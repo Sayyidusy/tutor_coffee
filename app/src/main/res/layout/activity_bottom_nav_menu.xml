@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream_bg"
-    tools:context=".MainActivity">
+    android:background="@color/cream_bg">
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -37,10 +36,5 @@
         android:backgroundTint="@color/dark_cream"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/bottomAppBar" />
-
-
-
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
