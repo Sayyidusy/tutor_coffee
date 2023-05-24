@@ -3,7 +3,7 @@
     <string name="title_selector">BrewMaster</string>
     <string name="desc_title">Your ultimate solution for a perfect\n cup of coffee every time!</string>
 
-    <string name="welcome_landing">Hey,Welcome Back !!</string>
+    <string name="welcome_landing">Hey,\nWelcome Back !!</string>
     <string name="create_account">Create\nNew Account</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -17,10 +17,13 @@
     <string name="type_confirm_pass">Confirm your password..</string>
     <string name="already_have">Already have an account? Sign In Here!!</string>
     <string name="lets_making_coffee">Let’s making coffee with our method</string>
+    <string name="sample_name">WELCOME\nSAYYIDUSY SYAUQI</string>
     <string name="choose_method">Choose Method !</string>
     <string name="aeropress">Aeropress</string>
     <string name="frenchpress">French Press</string>
     <string name="chemex">Chemex</string>
     <string name="cupping">Cupping</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

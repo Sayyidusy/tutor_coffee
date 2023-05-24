@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/coffee">
+    android:background="@color/cream_bg">
 
 
     <TextView
@@ -12,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
-        android:text="@string/title_signin"
-        android:textColor="@color/coffe_cream"
+        android:text="@string/welcome_landing"
+        android:textColor="@color/brown_secondary"
         android:textSize="@dimen/text_35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +84,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
+        android:text="@string/forgot"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -96,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
         android:background="@drawable/button_splash"
-        android:text="@string/SignUp"
+        android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.Wakey.LabelMedium.Bold"
         android:textColor="@color/white"
@@ -109,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/another_account"
+        android:text="@string/desc_signup"
         android:textColor="@color/white"
         android:textSize="@dimen/text_16sp"
         app:layout_constraintEnd_toEndOf="parent"

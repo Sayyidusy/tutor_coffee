@@ -10,6 +10,10 @@
     <dimen name="size_340dp">340dp</dimen>
 
     <dimen name="height_56dp">56dp</dimen>
+    <dimen name="height_48dp">48dp</dimen>
+    <dimen name="height_162dp">162dp</dimen>
+    <dimen name="height_252dp">252dp</dimen>
+    <dimen name="height_213dp">213dp</dimen>
 
     <dimen name="width_172dp">172dp</dimen>
     <dimen name="width_130dp">130dp</dimen>
@@ -20,6 +24,7 @@
     <dimen name="width_265dp">265dp</dimen>
     <dimen name="width_383dp">383dp</dimen>
     <dimen name="width_483dp">483dp</dimen>
+    <dimen name="width_152dp">152dp</dimen>
 
     <dimen name="margin_128dp">128dp</dimen>
     <dimen name="margin_112dp">112dp</dimen>
@@ -43,4 +48,5 @@
 
     <dimen name="corner_16dp">16dp</dimen>
     <dimen name="corner_8dp">8dp</dimen>
+    <dimen name="corner_30dp">30dp</dimen>
 </resources>
