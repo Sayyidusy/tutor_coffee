@@ -25,8 +25,6 @@
             android:background="@android:color/transparent"
             app:elevation="0dp"
             app:menu="@menu/bottom_nav_menu"/>
-
-
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

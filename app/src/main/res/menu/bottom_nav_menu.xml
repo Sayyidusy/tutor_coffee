@@ -3,20 +3,20 @@
 
     <item android:id="@+id/home"
         android:title="Home"
-        android:icon="@drawable/ic_favorite"/>
+        android:icon="@drawable/ic_home"/>
 
     <item android:id="@+id/favorite"
         android:title="Favorite"
-        android:icon="@drawable/ic_favorite" />
+        android:icon="@drawable/ic_fav" />
 
     <item android:id="@+id/placeholder"
         android:title=""/>
 
     <item android:id="@+id/recipes"
         android:title="Recipes"
-        android:icon="@drawable/ic_favorite" />
+        android:icon="@drawable/ic_file" />
 
     <item android:id="@+id/profile"
         android:title="Profile"
-        android:icon="@drawable/ic_profile" />
+        android:icon="@drawable/ic_person" />
 </menu>
