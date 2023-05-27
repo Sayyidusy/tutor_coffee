@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/fragment_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -25,7 +25,7 @@
                 android:background="@drawable/top_background">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/img_home"
                     android:layout_width="132dp"
                     android:layout_height="130dp"
                     android:layout_marginEnd="@dimen/margin_24dp"
@@ -36,7 +36,7 @@
                     app:layout_constraintVertical_bias="1.0" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tv_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="64dp"
@@ -50,7 +50,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/tv_desc_home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -59,8 +59,8 @@
                     android:textSize="@dimen/text_14sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_constraintStart_toStartOf="@+id/tv_username"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_username"
                     app:layout_constraintVertical_bias="0.241" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -89,7 +89,7 @@
                             android:background="@drawable/shape_item">
 
                             <ImageView
-                                android:id="@+id/imageView13"
+                                android:id="@+id/img_coffee_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/vec_coffee_3"
@@ -101,7 +101,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView17"
+                            android:id="@+id/tv_coffee_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/aeropress"
@@ -124,7 +124,7 @@
                             android:background="@drawable/shape_item">
 
                             <ImageView
-                                android:id="@+id/imageView18"
+                                android:id="@+id/img_coffee_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/vec_coffee_3"
@@ -136,10 +136,10 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/tv_coffee_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/aeropress"
+                            android:text="@string/chemex"
                             android:textAlignment="center"
                             android:textColor="@color/brown_secondary"
                             android:textSize="@dimen/text_16sp"
@@ -152,7 +152,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:layout_marginStart="@dimen/margin_16dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -168,7 +169,7 @@
                             android:background="@drawable/shape_item">
 
                             <ImageView
-                                android:id="@+id/imageView20"
+                                android:id="@+id/img_coffee_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/vec_coffee_3"
@@ -180,10 +181,10 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_coffee_3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/aeropress"
+                            android:text="@string/frenchpress"
                             android:textAlignment="center"
                             android:textColor="@color/brown_secondary"
                             android:textSize="@dimen/text_16sp"
@@ -203,7 +204,7 @@
                             android:background="@drawable/shape_item">
 
                             <ImageView
-                                android:id="@+id/imageView15"
+                                android:id="@+id/img_coffee_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/vec_coffee_3"
@@ -215,10 +216,10 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_coffee_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/aeropress"
+                            android:text="@string/cupping"
                             android:textAlignment="center"
                             android:textColor="@color/brown_secondary"
                             android:textSize="@dimen/text_16sp"
@@ -226,10 +227,7 @@
 
                     </LinearLayout>
                 </LinearLayout>
-
-
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
