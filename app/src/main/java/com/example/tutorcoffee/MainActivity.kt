@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.profile -> replaceFragment(ProfileFragment())
 
                 else -> {
-
                 }
             }
             true
