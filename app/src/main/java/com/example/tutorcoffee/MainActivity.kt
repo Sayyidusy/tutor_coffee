@@ -12,16 +12,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //fab navigation bisa di tekan
+
+
         replaceFragment(HomeFragment())
 
-        binding.bottomAppBar.setOnMenuItemClickListener{
+        binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.favorite -> replaceFragment(FavoriteFragment())
+                R.id.add_recipes -> replaceFragment(AddRecipesFragment())
                 R.id.recipes -> replaceFragment(RecipesFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
 
                 else -> {
+
                 }
             }
             true
