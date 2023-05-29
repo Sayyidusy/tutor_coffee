@@ -11,31 +11,25 @@ class MainActivity : AppCompatActivity() {
     private lateinit var newRecycleView : RecyclerView
     private lateinit var newArrayList: ArrayList<resep>
     lateinit var iconAlatId : Array<Int>
-    lateinit var iconTimerId : Array<Int>
     lateinit var nama : Array<String>
-    lateinit var timer : Array<String>
+    lateinit var tanggal : Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         iconAlatId = arrayOf(
             R.drawable.vec_coffee_1,
-            R.drawable.vec_coffee_1,
-        )
-
-        iconTimerId = arrayOf(
-            R.drawable.timer,
-            R.drawable.timer,
+            R.drawable.vec_coffee_2,
         )
 
         nama = arrayOf(
             "AeroPress basic recipe",
-            "AeroPress basic recipe",
+            "French Press basic recipe",
         )
 
-        timer = arrayOf(
-            "2:30",
-            "2:30",
+        tanggal = arrayOf(
+            "13-03-2023",
+            "13-03-2023",
         )
 
         newRecycleView = findViewById(R.id.recycleView)
@@ -47,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun getUserData() {
         for (i in iconAlatId.indices){
-            val resep = resep(iconAlatId[i], iconTimerId[i], nama[i], timer[i])
+            val resep = resep(iconAlatId[i], nama[i], tanggal[i])
             newArrayList.add(resep)
         }
 

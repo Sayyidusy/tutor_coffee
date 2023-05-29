@@ -17,17 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iconTimer"
-        android:layout_width="@dimen/width_20dp"
-        android:layout_height="@dimen/height_20dp"
-        android:layout_marginStart="16dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/timer"
-        app:layout_constraintStart_toEndOf="@+id/iconAlat"
-        app:layout_constraintTop_toBottomOf="@+id/namaResep" />
-
     <TextView
         android:id="@+id/namaResep"
         android:layout_width="wrap_content"
@@ -40,14 +29,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/timer"
+        android:id="@+id/tanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/timer"
+        android:layout_marginStart="16dp"
+        android:text="@string/tanggal"
         android:textColor="@color/orange_text"
         android:textSize="@dimen/text_14sp"
-        app:layout_constraintStart_toEndOf="@+id/iconTimer"
+        app:layout_constraintStart_toEndOf="@+id/iconAlat"
         app:layout_constraintTop_toBottomOf="@+id/namaResep" />
 
     <View

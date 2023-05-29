@@ -25,17 +25,15 @@ class ViewAdapter (private val resep : ArrayList<resep>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = resep[position]
         holder.iconAlat.setImageResource(currentItem.iconAlat)
-        holder.iconTimer.setImageResource(currentItem.iconTimer)
         holder.namaResep.text = currentItem.nama
-        holder.timer.text = currentItem.timer
+        holder.tanggal.text = currentItem.tanggal
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val iconAlat : ShapeableImageView = itemView.findViewById(R.id.iconAlat)
-        val iconTimer : ShapeableImageView = itemView.findViewById(R.id.iconTimer)
 
         val namaResep : TextView = itemView.findViewById(R.id.namaResep)
-        val timer : TextView = itemView.findViewById(R.id.timer)
+        val tanggal : TextView = itemView.findViewById(R.id.tanggal)
     }
 
 }
