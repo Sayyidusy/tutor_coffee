@@ -28,7 +28,7 @@
 
 
     <string name="aeropress1">AeroPress basic recipe</string>
-    <string name="aeropress_judul">AEROPRESS COFFEE BREWING</string>
+    <string name="aeropress_judul"><b>AEROPRESS COFFEE BREWING</b></string>
     <string name="timer">2:30 Mins</string>
 
 </resources>
