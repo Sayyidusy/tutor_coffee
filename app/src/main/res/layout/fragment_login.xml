@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream_bg"
-    tools:context=".authentication.LoginActivity">
+    tools:context=".authentication.LoginFragment">
 
 
     <TextView
@@ -115,21 +115,20 @@
         android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.Wakey.LabelMedium.Bold"
+
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/tv_signin"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_signin"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="@string/desc_signup"
         android:textColor="@color/white"
         android:textSize="@dimen/text_16sp"
-        android:clickable="true"
-        android:onClick="onClickText"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
