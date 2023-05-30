@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         iconAlatId = arrayOf(
-            R.drawable.vec_coffee_1,
-            R.drawable.vec_coffee_1,
+            R.mipmap.aeropress1_foreground,
+            R.mipmap.aeropress1_foreground,
         )
 
         iconTimerId = arrayOf(
