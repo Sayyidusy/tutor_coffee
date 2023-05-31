@@ -11,13 +11,14 @@
     <string name="get_started">Get Started</string>
 
     <string name="sign_in">Sign In</string>
-    <string name="desc_signup">Dont have an account? Sign Up Here!!</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="desc_signup">Dont have an account? <font color="#A64B2A"><b>Sign Up Here!!</b></font></string>
     <string name="forgot">Forgot Password ?</string>
     <string name="type_email">Type your email.. </string>
     <string name="type_password">Type your password.. </string>
     <string name="confirm_pass">Confirm Password</string>
     <string name="type_confirm_pass">Confirm your password..</string>
-    <string name="already_have">Already have an account? Sign In Here!!</string>
+    <string name="already_have">Already have an account? <font color="#A64B2A"><b>Sign In Here!!</b></font></string>
 
     <string name="lets_making_coffee">Let’s making coffee with our method</string>
 
