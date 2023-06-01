@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.tutorcoffee.MainActivity
 import com.example.tutorcoffee.R
 import com.example.tutorcoffee.databinding.ActivityRegisterBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.Observable
 
@@ -16,11 +18,15 @@ import io.reactivex.Observable
 class RegisterActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //auth
+        auth = FirebaseAuth.getInstance()
 
         // username validation
 
@@ -97,8 +103,10 @@ class RegisterActivity: AppCompatActivity() {
 
         // click button register
         binding.btnSignup.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
+            registerUser(email, password)
+
         }
         binding.tvHaveAccount.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -122,6 +130,18 @@ class RegisterActivity: AppCompatActivity() {
 
     private fun showPasswordConfirmAlert(isNotValid: Boolean){
         binding.etConfirmPassword.error = if(isNotValid) "password not match!" else null
+    }
+
+    private fun registerUser(emai:String, password:String){
+        auth.createUserWithEmailAndPassword(emai, password)
+            .addOnCompleteListener(this) {
+                if(it.isSuccessful){
+                    startActivity(Intent(this, MainActivity::class.java))
+                    Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
+                }else{
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "239025859617",
+    "project_id": "tutorcafe-37aa6",
+    "storage_bucket": "tutorcafe-37aa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239025859617:android:76444d5e64b23347ac8760",
+        "android_client_info": {
+          "package_name": "com.example.tutorcoffee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbcNvqT0U8Y-rrw9wp-0q213hYuxCOdNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239025859617:android:f7bf62f5f0666404ac8760",
+        "android_client_info": {
+          "package_name": "com.example.tutorcoffee.ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbcNvqT0U8Y-rrw9wp-0q213hYuxCOdNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
