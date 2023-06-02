@@ -1,14 +1,12 @@
 package com.example.tutorcoffee
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
-
+class MainResep : AppCompatActivity(){
     private lateinit var newRecycleView : RecyclerView
     private lateinit var newArrayList: ArrayList<resep>
     lateinit var iconAlatId : Array<Int>
@@ -68,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         newRecycleView.adapter = adapter
         adapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainResep,"resep no. $position", Toast.LENGTH_SHORT).show()
             }
 
         })

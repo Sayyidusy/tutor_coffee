@@ -11,10 +11,20 @@ import com.google.android.material.imageview.ShapeableImageView
 class ViewAdapter (private val resep : ArrayList<resep>) :
     RecyclerView.Adapter<ViewAdapter.MyViewHolder>() {
 
+    private lateinit var mListener : onItemClickListener
+
+    interface onItemClickListener{
+        fun onItemClick(position : Int)
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_resep, parent, false)
-        return MyViewHolder(itemView)
+        return MyViewHolder(itemView, mListener)
 
     }
 
@@ -30,12 +40,19 @@ class ViewAdapter (private val resep : ArrayList<resep>) :
         holder.timer.text = currentItem.timer
     }
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class MyViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
         val iconAlat : ShapeableImageView = itemView.findViewById(R.id.iconAlat)
         val iconTimer : ShapeableImageView = itemView.findViewById(R.id.iconTimer)
 
         val namaResep : TextView = itemView.findViewById(R.id.namaResep)
         val timer : TextView = itemView.findViewById(R.id.timer)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
+
     }
 
 }
