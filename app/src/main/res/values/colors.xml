@@ -18,4 +18,7 @@
     <color name="dark_coffee">#272727</color>
     <color name="cream_bg">#FFF0DE</color>
     <color name="btn_grey">#ACACAC</color>
+    <color name="grey_text">#AEAEAE</color>
+    <color name="orange_text">#DE9F7B</color>
+    <color name="orange_divider">#CA8B58</color>
 </resources>
