@@ -1,16 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/cream_bg"
-    tools:context=".ProfileFragment">
+    tools:context=".user.ProfileFragment">
+
+    <View
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_64dp"
+        android:background="@drawable/top_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.625"
+        app:srcCompat="@drawable/arrow_back" />
 
     <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="Profile"
+        android:textColor="@color/cream_bg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <TextView
+        android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="@dimen/margin_24dp"
-        android:text="Profile" />
+        android:layout_marginTop="24dp"
+        android:text="Username"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_username"
+        android:layout_width="357dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="@dimen/corner_8dp"
+        android:textColor="#8e8e8e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Email"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_email"
+        android:layout_width="357dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="@dimen/corner_8dp"
+        android:textColor="#8e8e8e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/height_40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_splash"
+        android:text="SAVE"
+        android:textColor="@color/cream_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/height_40dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/button_splash"
+        android:text="LogOut"
+        android:textColor="@color/cream_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

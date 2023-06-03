@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.tutorcoffee.databinding.ActivityMainBinding
+import com.example.tutorcoffee.user.ProfileFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
