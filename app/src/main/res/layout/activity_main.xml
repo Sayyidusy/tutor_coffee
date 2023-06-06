@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        tools:listitem="@layout/list_resep"
         app:layout_constraintTop_toBottomOf="@+id/header"
         tools:layout_editor_absoluteX="0dp" />
 

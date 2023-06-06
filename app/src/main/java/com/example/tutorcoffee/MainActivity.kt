@@ -1,5 +1,6 @@
 package com.example.tutorcoffee
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
@@ -68,7 +69,24 @@ class MainActivity : AppCompatActivity() {
         newRecycleView.adapter = adapter
         adapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
+               // Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
+
+                if(position == 0){
+                    val intent = Intent(this@MainActivity,DetailResep::class.java)
+                    startActivity(intent)
+                } else if (position == 1) {
+                    val intent = Intent(this@MainActivity, DetailResep2::class.java)
+                    startActivity(intent)
+                } else if (position == 2) {
+                    val intent = Intent(this@MainActivity, DetailResep3::class.java)
+                    startActivity(intent)
+                } else if (position == 3) {
+                    val intent = Intent(this@MainActivity, DetailResep4::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(this@MainActivity, DetailResep5::class.java)
+                    startActivity(intent)
+                }
             }
 
         })

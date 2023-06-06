@@ -12,6 +12,21 @@
         android:theme="@style/Theme.TutorCoffee"
         tools:targetApi="31">
         <activity
+            android:name=".DetailResep5"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResep4"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResep3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResep2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResep"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

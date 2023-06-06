@@ -60,7 +60,7 @@
                 android:id="@+id/judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AeroPress basic recipe"
+                android:text="AeroPress Espresso Recipe"
                 android:textColor="@color/cream_bg"
                 app:layout_constraintBottom_toBottomOf="@+id/header"
                 app:layout_constraintEnd_toStartOf="@+id/add"
@@ -161,7 +161,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="180 ml"
+                android:text="55 ml"
                 android:textColor="@color/orange_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerWater"
@@ -216,7 +216,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="92 c"
+                android:text="91 c"
                 android:textColor="@color/orange_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerTemperature"
@@ -257,7 +257,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Aeropress - inverted"
+                android:text="Aeropress - Inverted"
                 android:textColor="@color/orange_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerMethod"
@@ -299,7 +299,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Medium"
+                android:text="Fine"
                 android:textColor="@color/orange_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerRange"
@@ -341,7 +341,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="2:30"
+                android:text="0:50"
                 android:textColor="@color/orange_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerPrep"
@@ -381,7 +381,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="32dp"
-                android:text="1. Grind 17 g of coffee (Medium)"
+                android:text="1. Grind 17 g of coffee (Fine)"
                 android:textColor="@color/grey_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -437,7 +437,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="3. Add 17 g of coffee and 1/2 (90 ml) of water"
+                android:text="3. Add 17 g of coffee and 55 ml of water"
                 android:textColor="@color/grey_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep3"
@@ -465,7 +465,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="4. Stir well 1x"
+                android:text="4. Stir"
                 android:textColor="@color/grey_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep4"
@@ -493,7 +493,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="5. Add the rest of water (90 ml)"
+                android:text="5. Press"
                 android:textColor="@color/grey_text"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep5"
@@ -512,60 +512,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dividerStep4" />
 
-            <!--            step 6-->
-
-            <TextView
-                android:id="@+id/step6Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="6. Brew 1 min"
-                android:textColor="@color/grey_text"
-                android:textSize="@dimen/text_14sp"
-                app:layout_constraintBottom_toTopOf="@+id/dividerStep6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dividerStep5" />
-
-            <View
-                android:id="@+id/dividerStep6"
-                android:layout_width="match_parent"
-                android:layout_height="0.87dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="54dp"
-                android:layout_marginEnd="8dp"
-                android:background="@color/orange_divider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dividerStep5" />
-
-            <!--            step 7-->
-            <TextView
-                android:id="@+id/step7Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="7. Press"
-                android:textColor="@color/grey_text"
-                android:textSize="@dimen/text_14sp"
-                app:layout_constraintBottom_toTopOf="@+id/dividerStep7"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dividerStep6" />
-
-            <View
-                android:id="@+id/dividerStep7"
-                android:layout_width="match_parent"
-                android:layout_height="0.87dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="54dp"
-                android:layout_marginEnd="8dp"
-                android:background="@color/orange_divider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dividerStep6" />
 
             <!--            button make coffee-->
             <Button
@@ -582,7 +528,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dividerStep7" />
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
