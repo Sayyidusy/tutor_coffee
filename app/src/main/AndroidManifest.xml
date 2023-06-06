@@ -11,9 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TutorCoffee"
         tools:targetApi="31">
-
         <activity
-            android:name=".ui.OnBoardingActivity"
+            android:name=".DetailResep5"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResep4"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResep3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResepChemex2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailResepChemex"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityChemex"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +35,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity" />
-        <activity android:name=".authentication.LoginActivity"/>
-        <activity android:name=".authentication.RegisterActivity"/>
-        <activity android:name=".ListResepActivity"/>
     </application>
 
 </manifest>
