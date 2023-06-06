@@ -54,7 +54,7 @@
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/aeropress_judul"
+        android:text="@string/chemex_judul"
         android:textColor="@color/cream_bg"
         app:layout_constraintBottom_toBottomOf="@+id/header"
         app:layout_constraintEnd_toStartOf="@+id/add"
