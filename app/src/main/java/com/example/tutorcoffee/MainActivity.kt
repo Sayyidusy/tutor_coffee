@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         iconAlatId = arrayOf(
-            R.drawable.chemex_1,
-            R.drawable.chemex_1,
+            R.mipmap.aeropress1_foreground,
+            R.mipmap.aeropress1_foreground,
         )
 
         iconTimerId = arrayOf(
@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
         )
 
         nama = arrayOf(
-            "Chemex Brewing Tutorial",
-            "Chemex Sweet And Easy",
+            "French Press Tutorial",
+            "Perfect French Press Coffee",
         )
 
         timer = arrayOf(
+            "4:30",
             "5:30",
-            "4:20",
         )
 
         newRecycleView = findViewById(R.id.recycleView)
