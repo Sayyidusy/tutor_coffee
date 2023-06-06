@@ -25,7 +25,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".authentication.LoginActivity"/>
         <activity android:name=".authentication.RegisterActivity"/>
-        <activity android:name=".ListResepActivity"/>
     </application>
 
 </manifest>

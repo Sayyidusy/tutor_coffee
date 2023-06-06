@@ -16,13 +16,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //fab navigation bisa di tekan
-        binding.bottomNavigationView.background = null
-        binding.bottomNavigationView.menu.getItem(2).isEnabled = false
-        binding.fab.setOnClickListener {
-            replaceFragment(AddRecipesFragment())
-        }
-
-
 
         auth = FirebaseAuth.getInstance()
 
@@ -32,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.favorite -> replaceFragment(FavoriteFragment())
-//                R.id.add_recipes -> replaceFragment(AddRecipesFragment())
+                R.id.add_recipes -> replaceFragment(AddRecipesFragment())
                 R.id.recipes -> replaceFragment(RecipesFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
 
