@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/cream_bg"
     android:layout_height="match_parent">
@@ -21,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--    header-->
+            <!-- header-->
             <View
                 android:id="@+id/header"
                 android:layout_width="match_parent"
@@ -45,7 +44,7 @@
                 app:srcCompat="@drawable/arrow_back" />
 
             <ImageView
-                android:id="@+id/add"
+                android:id="@+id/favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -63,7 +62,7 @@
                 android:text="French Press Tutorial"
                 android:textColor="@color/cream_bg"
                 app:layout_constraintBottom_toBottomOf="@+id/header"
-                app:layout_constraintEnd_toStartOf="@+id/add"
+                app:layout_constraintEnd_toStartOf="@+id/favorite"
                 app:layout_constraintStart_toEndOf="@+id/back"
                 app:layout_constraintTop_toTopOf="@+id/header" />
 
@@ -93,7 +92,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Coffee"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/view"
                 app:layout_constraintStart_toEndOf="@+id/iconAlat"
@@ -148,7 +148,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Water"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerWater"
                 app:layout_constraintStart_toEndOf="@+id/iconAir"
@@ -203,7 +204,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Temperature"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerTemperature"
                 app:layout_constraintStart_toEndOf="@+id/iconThermo"
@@ -244,7 +246,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Method"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerMethod"
                 app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +289,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Range Of Grind"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerRange"
                 app:layout_constraintStart_toStartOf="parent"
@@ -328,7 +332,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Preparation Time"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerPrep"
                 app:layout_constraintStart_toStartOf="parent"
@@ -382,7 +387,8 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="32dp"
                 android:text="1. Grind 8 g of coffee (Medium - Coarse)"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/stepText" />
@@ -410,7 +416,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="2. Add 8 gram of coffee and 100 ml of water"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -438,7 +445,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="3. Stir"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep3"
                 app:layout_constraintStart_toStartOf="parent"
@@ -466,7 +474,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="4. Put the plunger on the press and brew 3 min 30 s"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep4"
                 app:layout_constraintStart_toStartOf="parent"
@@ -494,7 +503,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="5. Slowly plunge the press down"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/dividerStep5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -513,7 +523,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/dividerStep4" />
 
             <!--            button make coffee-->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonMakeCoffee"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/height_40dp"
@@ -523,6 +533,7 @@
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/shape_button_make_coffee"
                 android:text="Make Coffee"
+                android:textColor="@color/cream_bg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"

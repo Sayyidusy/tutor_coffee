@@ -2,10 +2,10 @@ package com.example.tutorcoffee
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tutorcoffee.ListResep.ViewAdapter
+import com.example.tutorcoffee.resep.resep
 
 class ListResepActivity : AppCompatActivity() {
 

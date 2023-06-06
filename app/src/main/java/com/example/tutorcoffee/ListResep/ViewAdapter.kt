@@ -1,11 +1,12 @@
-package com.example.tutorcoffee
+package com.example.tutorcoffee.ListResep
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tutorcoffee.R
+import com.example.tutorcoffee.resep.resep
 import com.google.android.material.imageview.ShapeableImageView
 
 class ViewAdapter (private val resep : ArrayList<resep>) :

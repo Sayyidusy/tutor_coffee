@@ -1,7 +1,8 @@
-package com.example.tutorcoffee
+package com.example.tutorcoffee.chemex
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tutorcoffee.R
 
 class DetailResepChemex2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddRecipesFragment"
+    tools:context=".addresep.AddRecipesFragment"
     android:background="@color/cream_bg">
 
     <TextView

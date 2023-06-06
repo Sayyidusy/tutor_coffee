@@ -1,4 +1,4 @@
-package com.example.tutorcoffee
+package com.example.tutorcoffee.french
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tutorcoffee.R
+import com.example.tutorcoffee.ListResep.ViewAdapter
+import com.example.tutorcoffee.resep.resep
 
-class MainActivityChemex : AppCompatActivity() {
+class MainActivityFrench : AppCompatActivity() {
 
     private lateinit var newRecycleView : RecyclerView
     private lateinit var newArrayList: ArrayList<resep>
@@ -17,11 +20,11 @@ class MainActivityChemex : AppCompatActivity() {
     lateinit var timer : Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_chemex)
+        setContentView(R.layout.activity_main_french)
 
         iconAlatId = arrayOf(
-            R.drawable.chemex_1,
-            R.drawable.chemex_1,
+            R.mipmap.aeropress1_foreground,
+            R.mipmap.aeropress1_foreground,
         )
 
         iconTimerId = arrayOf(
@@ -30,13 +33,13 @@ class MainActivityChemex : AppCompatActivity() {
         )
 
         nama = arrayOf(
-            "Chemex Brewing Tutorial",
-            "Chemex Sweet And Easy",
+            "French Press Tutorial",
+            "Perfect French Press Coffee",
         )
 
         timer = arrayOf(
+            "4:30",
             "5:30",
-            "4:20",
         )
 
         newRecycleView = findViewById(R.id.recycleView)
@@ -54,18 +57,18 @@ class MainActivityChemex : AppCompatActivity() {
 
         var adapter = ViewAdapter(newArrayList)
         newRecycleView.adapter = adapter
-        adapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
                // Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
 
                 if(position == 0){
-                    val intent = Intent(this@MainActivityChemex,DetailResepChemex::class.java)
+                    val intent = Intent(this@MainActivityFrench, DetailResepFrench::class.java)
                     startActivity(intent)
                 } else if (position == 1) {
-                    val intent = Intent(this@MainActivityChemex, DetailResepChemex2::class.java)
+                    val intent = Intent(this@MainActivityFrench, DetailResepFrench2::class.java)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this@MainActivityChemex,"resep no. $position", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivityFrench,"resep no. $position", Toast.LENGTH_SHORT).show()
                 }
             }
 

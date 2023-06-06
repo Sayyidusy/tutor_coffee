@@ -1,4 +1,4 @@
-package com.example.tutorcoffee
+package com.example.tutorcoffee.resep
 
 data class resep(
     val iconAlat: Int,
