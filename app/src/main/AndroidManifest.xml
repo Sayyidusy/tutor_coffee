@@ -21,13 +21,13 @@
             android:name=".DetailResep3"
             android:exported="false" />
         <activity
-            android:name=".DetailResep2"
+            android:name=".DetailResepFrench2"
             android:exported="false" />
         <activity
-            android:name=".DetailResep"
+            android:name=".DetailResepFrench"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityFrench"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

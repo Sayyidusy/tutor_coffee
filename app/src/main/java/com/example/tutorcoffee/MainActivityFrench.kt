@@ -3,12 +3,11 @@ package com.example.tutorcoffee
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivityFrench : AppCompatActivity() {
 
     private lateinit var newRecycleView : RecyclerView
     private lateinit var newArrayList: ArrayList<resep>
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var timer : Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_french)
 
         iconAlatId = arrayOf(
             R.mipmap.aeropress1_foreground,
@@ -60,13 +59,13 @@ class MainActivity : AppCompatActivity() {
                // Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
 
                 if(position == 0){
-                    val intent = Intent(this@MainActivity,DetailResep::class.java)
+                    val intent = Intent(this@MainActivityFrench,DetailResepFrench::class.java)
                     startActivity(intent)
                 } else if (position == 1) {
-                    val intent = Intent(this@MainActivity, DetailResep2::class.java)
+                    val intent = Intent(this@MainActivityFrench, DetailResepFrench2::class.java)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivityFrench,"resep no. $position", Toast.LENGTH_SHORT).show()
                 }
             }
 
