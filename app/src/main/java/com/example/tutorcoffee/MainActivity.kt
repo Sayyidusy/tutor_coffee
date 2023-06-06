@@ -21,35 +21,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         iconAlatId = arrayOf(
-            R.mipmap.aeropress1_foreground,
-            R.mipmap.aeropress1_foreground,
-            R.mipmap.aeropress1_foreground,
-            R.mipmap.aeropress1_foreground,
-            R.mipmap.aeropress1_foreground,
+            R.drawable.chemex_1,
+            R.drawable.chemex_1,
         )
 
         iconTimerId = arrayOf(
             R.drawable.timer,
             R.drawable.timer,
-            R.drawable.timer,
-            R.drawable.timer,
-            R.drawable.timer,
         )
 
         nama = arrayOf(
-            "AeroPress Basic Recipe",
-            "AeroPress Brew recipe",
-            "Aeropress Espresso Recipe",
-            "Camping Recipe",
-            "Cascara Tea in Aeropress",
+            "Chemex Brewing Tutorial",
+            "Chemex Sweet And Easy",
         )
 
         timer = arrayOf(
-            "2:30",
-            "3:00",
-            "0:50",
-            "2:50",
-            "8:00",
+            "5:30",
+            "4:20",
         )
 
         newRecycleView = findViewById(R.id.recycleView)
@@ -77,15 +65,8 @@ class MainActivity : AppCompatActivity() {
                 } else if (position == 1) {
                     val intent = Intent(this@MainActivity, DetailResep2::class.java)
                     startActivity(intent)
-                } else if (position == 2) {
-                    val intent = Intent(this@MainActivity, DetailResep3::class.java)
-                    startActivity(intent)
-                } else if (position == 3) {
-                    val intent = Intent(this@MainActivity, DetailResep4::class.java)
-                    startActivity(intent)
                 } else {
-                    val intent = Intent(this@MainActivity, DetailResep5::class.java)
-                    startActivity(intent)
+                    Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
                 }
             }
 
