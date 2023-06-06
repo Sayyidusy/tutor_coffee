@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        tools:listitem="@layout/list_resep"
         app:layout_constraintTop_toBottomOf="@+id/header"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -53,7 +54,7 @@
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/chemex_judul"
+        android:text="@string/frenchpress_judul"
         android:textColor="@color/cream_bg"
         app:layout_constraintBottom_toBottomOf="@+id/header"
         app:layout_constraintEnd_toStartOf="@+id/add"

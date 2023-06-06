@@ -52,7 +52,6 @@ class ViewAdapter (private val resep : ArrayList<resep>) :
                 listener.onItemClick(adapterPosition)
             }
         }
-
     }
 
 }
