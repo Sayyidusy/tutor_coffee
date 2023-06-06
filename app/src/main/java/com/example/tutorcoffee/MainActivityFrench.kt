@@ -1,0 +1,74 @@
+package com.example.tutorcoffee
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
+class MainActivityFrench : AppCompatActivity() {
+
+    private lateinit var newRecycleView : RecyclerView
+    private lateinit var newArrayList: ArrayList<resep>
+    lateinit var iconAlatId : Array<Int>
+    lateinit var iconTimerId : Array<Int>
+    lateinit var nama : Array<String>
+    lateinit var timer : Array<String>
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main_french)
+
+        iconAlatId = arrayOf(
+            R.mipmap.aeropress1_foreground,
+            R.mipmap.aeropress1_foreground,
+        )
+
+        iconTimerId = arrayOf(
+            R.drawable.timer,
+            R.drawable.timer,
+        )
+
+        nama = arrayOf(
+            "French Press Tutorial",
+            "Perfect French Press Coffee",
+        )
+
+        timer = arrayOf(
+            "4:30",
+            "5:30",
+        )
+
+        newRecycleView = findViewById(R.id.recycleView)
+        newRecycleView.layoutManager = LinearLayoutManager(this)
+        newRecycleView.setHasFixedSize(true)
+
+        newArrayList = arrayListOf<resep>()
+        getUserData()
+    }
+    private fun getUserData() {
+        for (i in iconAlatId.indices){
+            val resep = resep(iconAlatId[i], iconTimerId[i], nama[i], timer[i])
+            newArrayList.add(resep)
+        }
+
+        var adapter = ViewAdapter(newArrayList)
+        newRecycleView.adapter = adapter
+        adapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+               // Toast.makeText(this@MainActivity,"resep no. $position", Toast.LENGTH_SHORT).show()
+
+                if(position == 0){
+                    val intent = Intent(this@MainActivityFrench,DetailResepFrench::class.java)
+                    startActivity(intent)
+                } else if (position == 1) {
+                    val intent = Intent(this@MainActivityFrench, DetailResepFrench2::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this@MainActivityFrench,"resep no. $position", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        })
+    }
+}
