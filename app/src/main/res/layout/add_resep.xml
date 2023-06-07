@@ -1,6 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/cream_bg"
     android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_64dp"
+        android:background="@drawable/top_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_favorite" />
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AeroPress basic recipe"
+        android:textColor="@color/cream_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toStartOf="@+id/add"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconAlat"
+                android:layout_width="@dimen/width_40dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="80dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/coffee_bean_foreground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/namaResep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="92dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Coffee"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintStart_toEndOf="@+id/iconAlat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/iconAlat"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/coffee_add"
+                android:layout_width="@dimen/height_162dp"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_marginStart="@dimen/height_213dp"
+                android:layout_marginTop="@dimen/height_64dp"
+                android:background="@drawable/input"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="@dimen/text_12sp"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:suffixText="Gr" />
+
+            <ImageView
+                android:id="@+id/imgwater"
+                android:layout_width="@dimen/height_40dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_margin="@dimen/text_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:srcCompat="@mipmap/water_drop_foreground" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/imgwater"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/height_20dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Water"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintStart_toEndOf="@+id/imgwater"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/water_add"
+                android:layout_width="@dimen/height_162dp"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_marginStart="@dimen/height_213dp"
+                android:background="@drawable/input"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="@dimen/text_12sp"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:suffixText="ml" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/height_40dp"
+                android:layout_height="@dimen/width_40dp"
+                android:layout_margin="@dimen/text_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:srcCompat="@mipmap/thermometer_foreground" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/thermo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/height_20dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Temprature"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/temp_add"
+                android:layout_width="@dimen/height_162dp"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_marginStart="@dimen/height_213dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/input"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="@dimen/text_12sp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintVertical_bias="1.0"
+                app:suffixText="C" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/met_add"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="@dimen/height_162dp"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_marginStart="@dimen/height_213dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/input_drop"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="@dimen/text_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/met_add"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Method"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/grinds"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="@dimen/height_162dp"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_marginStart="@dimen/height_213dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/input_drop"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="@dimen/text_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/grinds"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/grind_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Grind Size"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+
+                app:layout_constraintBottom_toTopOf="@+id/view5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="60dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Preparation Time"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step By Step"
+                android:fontFamily="@font/bevietnam_bold"
+                android:textColor="@color/dark_cream"
+                android:layout_marginTop="@dimen/text_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginTop="60dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintTop_toBottomOf="@+id/step"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Step 1"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step" />
+
+            <Button
+                android:id="@+id/add_more"
+                android:layout_width="@dimen/width_257dp"
+                android:layout_height="@dimen/height_34dp"
+                android:text="Add More Step"
+                android:textSize="@dimen/text_12sp"
+                android:background="@drawable/input_drop"
+                android:layout_marginTop="@dimen/text_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="@dimen/width_265dp"
+                android:layout_height="@dimen/width_40dp"
+                android:layout_marginTop="@dimen/margin_112dp"
+                android:background="@drawable/input_drop"
+                android:text="Create Recipee"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_more" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
