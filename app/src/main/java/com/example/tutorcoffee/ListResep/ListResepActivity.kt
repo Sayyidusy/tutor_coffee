@@ -3,6 +3,7 @@ package com.example.tutorcoffee
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tutorcoffee.ListResep.ViewAdapter
@@ -19,10 +20,22 @@ class ListResepActivity : AppCompatActivity() {
     lateinit var iconTimerId : Array<Int>
     lateinit var nama : Array<String>
     lateinit var timer : Array<String>
+
+    private lateinit var judulList: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityListResepBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        judulList = findViewById(R.id.judul_list)
+
+        val cardId = intent.getIntExtra("cardId", -1)
+
+        when (cardId) {
+            R.id.card_aeropress -> judulList.text = getString(R.string.aeropress_judul)
+            R.id.card_frenchPress -> judulList.text = getString(R.string.frenchpress_judul)
+            R.id.card_chemex -> judulList.text = getString(R.string.chemex_judul)
+        }
 
         iconAlatId = arrayOf(
             R.mipmap.aeropress1_foreground,
