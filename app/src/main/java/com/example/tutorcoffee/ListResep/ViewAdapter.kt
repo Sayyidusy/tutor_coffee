@@ -9,8 +9,8 @@ import com.example.tutorcoffee.R
 import com.example.tutorcoffee.resep.resep
 import com.google.android.material.imageview.ShapeableImageView
 
-class ViewAdapter (private val resep : ArrayList<resep>) :
-    RecyclerView.Adapter<ViewAdapter.MyViewHolder>() {
+
+class ViewAdapter (private val resep : ArrayList<resep>) : RecyclerView.Adapter<ViewAdapter.MyViewHolder>() {
 
     private lateinit var mListener : onItemClickListener
 
@@ -24,7 +24,8 @@ class ViewAdapter (private val resep : ArrayList<resep>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_resep, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_resep,
+            parent, false)
         return MyViewHolder(itemView, mListener)
 
     }
@@ -37,14 +38,13 @@ class ViewAdapter (private val resep : ArrayList<resep>) :
         val currentItem = resep[position]
         holder.iconAlat.setImageResource(currentItem.iconAlat)
         holder.iconTimer.setImageResource(currentItem.iconTimer)
-        holder.namaResep.text = currentItem.nama
-        holder.timer.text = currentItem.timer
+        holder.namaResep.text = currentItem.namaresep
+        holder.timer.text = currentItem.wakturesep
     }
 
     class MyViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
         val iconAlat : ShapeableImageView = itemView.findViewById(R.id.iconAlat)
         val iconTimer : ShapeableImageView = itemView.findViewById(R.id.iconTimer)
-
         val namaResep : TextView = itemView.findViewById(R.id.namaResep)
         val timer : TextView = itemView.findViewById(R.id.timer)
 

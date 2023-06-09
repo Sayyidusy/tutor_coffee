@@ -1,14 +1,18 @@
 package com.example.tutorcoffee
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tutorcoffee.ListResep.ViewAdapter
+import com.example.tutorcoffee.aero.DetailResepAero
+import com.example.tutorcoffee.databinding.ActivityListResepBinding
 import com.example.tutorcoffee.resep.resep
 
 class ListResepActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityListResepBinding
     private lateinit var newRecycleView : RecyclerView
     private lateinit var newArrayList: ArrayList<resep>
     lateinit var iconAlatId : Array<Int>
@@ -17,7 +21,8 @@ class ListResepActivity : AppCompatActivity() {
     lateinit var timer : Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_resep)
+        binding = ActivityListResepBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         iconAlatId = arrayOf(
             R.mipmap.aeropress1_foreground,
@@ -63,14 +68,20 @@ class ListResepActivity : AppCompatActivity() {
             val resep = resep(iconAlatId[i], iconTimerId[i], nama[i], timer[i])
             newArrayList.add(resep)
         }
-
-        var adapter = ViewAdapter(newArrayList)
+        val adapter = ViewAdapter(newArrayList)
         newRecycleView.adapter = adapter
         adapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
+                // Memperoleh item yang diklik dari adapter
+                val clickedItem = newArrayList[position]
+                // Membuat Intent ke DetailActivity
+                val intent = Intent(this@ListResepActivity, DetailResepAero::class.java)
+                intent.putExtra("nama", clickedItem.namaresep)
+                intent.putExtra("timer", clickedItem.wakturesep)
 
+                // Memulai DetailActivity
+                startActivity(intent)
             }
-
         })
     }
 }
