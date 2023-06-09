@@ -44,17 +44,17 @@
                 app:layout_constraintVertical_bias="0.4"
                 app:srcCompat="@drawable/arrow_back" />
 
-            <ImageView
-                android:id="@+id/add"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/favorite"
+                android:layout_width="22dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
+                android:button="@drawable/selector_fav_item"
                 app:layout_constraintBottom_toBottomOf="@+id/header"
-                app:layout_constraintEnd_toEndOf="@+id/header"
-                app:layout_constraintTop_toTopOf="@+id/header"
-                app:srcCompat="@drawable/ic_favorite" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/header" />
 
             <TextView
                 android:id="@+id/judul"
@@ -63,8 +63,8 @@
                 android:text="Chemex Sweet And Easy"
                 android:textColor="@color/cream_bg"
                 app:layout_constraintBottom_toBottomOf="@+id/header"
-                app:layout_constraintEnd_toStartOf="@+id/add"
-                app:layout_constraintStart_toEndOf="@+id/back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/header" />
 
 

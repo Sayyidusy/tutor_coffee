@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.tutorcoffee.ListResepActivity
 import com.example.tutorcoffee.R
+import com.example.tutorcoffee.chemex.MainActivityChemex
 import com.example.tutorcoffee.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
