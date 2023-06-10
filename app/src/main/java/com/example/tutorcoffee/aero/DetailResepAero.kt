@@ -20,5 +20,9 @@ class DetailResepAero : AppCompatActivity() {
             Toast.makeText(this@DetailResepAero, msg, Toast.LENGTH_SHORT).show()
 
         }
+
+        binding.buttonMakeCoffee.setOnClickListener{
+
+        }
     }
 }
