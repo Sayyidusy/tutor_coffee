@@ -28,6 +28,7 @@
         <activity android:name=".authentication.RegisterActivity" />
         <activity android:name=".ListResepActivity" />
         <activity android:name=".aero.DetailResepAero" />
+        <activity android:name=".step.MainActivityStep"/>
     </application>
 
 </manifest>

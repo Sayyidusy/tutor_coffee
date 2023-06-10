@@ -1,10 +1,12 @@
 package com.example.tutorcoffee.aero
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.tutorcoffee.R
 import com.example.tutorcoffee.databinding.ActivityDetailResepAeroBinding
+import com.example.tutorcoffee.step.MainActivityStep
 
 class DetailResepAero : AppCompatActivity() {
 
@@ -22,7 +24,9 @@ class DetailResepAero : AppCompatActivity() {
         }
 
         binding.buttonMakeCoffee.setOnClickListener{
-
+            startActivity(
+                Intent(this, MainActivityStep::class.java)
+            )
         }
     }
 }
