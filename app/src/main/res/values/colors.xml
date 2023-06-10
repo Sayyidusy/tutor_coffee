@@ -21,4 +21,5 @@
     <color name="grey_text">#AEAEAE</color>
     <color name="orange_text">#DE9F7B</color>
     <color name="orange_divider">#CA8B58</color>
+    <color name="transparant">#00000000</color>
 </resources>
