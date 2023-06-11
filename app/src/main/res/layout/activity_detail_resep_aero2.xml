@@ -568,7 +568,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/dividerStep6" />
 
             <!--            button make coffee-->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonMakeCoffee"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/height_40dp"
@@ -577,6 +577,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/shape_button_make_coffee"
+                android:textColor="@color/cream_bg"
                 android:text="Make Coffee"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

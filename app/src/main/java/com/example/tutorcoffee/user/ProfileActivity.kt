@@ -25,6 +25,7 @@ class ProfileActivity : AppCompatActivity(){
             val username = binding.etUsername.text.toString()
             val email = binding.etEmail.text.toString()
 
+
             val user = User(username, email)
 
             if(uid != null){

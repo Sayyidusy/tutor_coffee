@@ -543,7 +543,7 @@
 
 
             <!--            button make coffee-->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonMakeCoffee"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/height_40dp"
@@ -551,6 +551,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
+                android:textColor="@color/cream_bg"
                 android:background="@drawable/shape_button_make_coffee"
                 android:text="Make Coffee"
                 app:layout_constraintBottom_toBottomOf="parent"

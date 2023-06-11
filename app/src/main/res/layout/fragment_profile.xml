@@ -99,6 +99,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_save"
         android:layout_width="100dp"
@@ -112,12 +114,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_logout"
         android:layout_width="100dp"
         android:layout_height="@dimen/height_40dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/button_splash"
         android:text="LogOut"
         android:textColor="@color/cream_bg"

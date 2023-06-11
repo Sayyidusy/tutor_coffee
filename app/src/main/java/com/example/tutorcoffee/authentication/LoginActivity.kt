@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var auth: FirebaseAuth
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -47,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
         passwordStream.subscribe {
             showTextMinimalAlert(it, "Password")
         }
-
 
         //Button Enable True or False
         val invalidFieldStream = Observable.combineLatest(
@@ -87,16 +87,17 @@ class LoginActivity : AppCompatActivity() {
             binding.etPassword.error = if (isNotValid) "$text can't be empty!" else null
     }
 
-    private fun loginUser(email:String, password:String){
+    private fun loginUser(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this){login ->
-                if (login.isSuccessful){
+            .addOnCompleteListener(this) { login ->
+                if (login.isSuccessful) {
                     Intent(this, MainActivity::class.java).also {
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        it.putExtra("username", email)
                         startActivity(it)
                         Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
                     }
-                }else{
+                } else {
                     Toast.makeText(this, "Login Failed!", Toast.LENGTH_SHORT).show()
                 }
             }

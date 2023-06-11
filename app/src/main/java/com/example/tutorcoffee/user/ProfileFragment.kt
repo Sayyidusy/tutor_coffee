@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.tutorcoffee.authentication.LoginActivity
 import com.example.tutorcoffee.databinding.FragmentProfileBinding
@@ -49,18 +49,50 @@ class ProfileFragment : Fragment() {
                     } else {
                         binding.etUsername.setText("Data not found")
                         binding.etEmail.setText("Data not found")
+
                     }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
                     binding.etUsername.setText("Error: ${error.message}")
                     binding.etEmail.setText("Error: ${error.message}")
+
                 }
             }
             database.child("users").child(userId).addValueEventListener(userListener)
         } else {
             binding.etUsername.setText("Not logged in")
             binding.etEmail.setText("Not logged in")
+        }
+
+        binding.btnSave.setOnClickListener {
+            val newUsername = binding.etUsername.text.toString().trim()
+            val newEmail = binding.etEmail.text.toString().trim()
+
+            val currentUser = auth.currentUser
+            if (currentUser != null) {
+                val userId = currentUser.uid
+                val userRef = database.child("users").child(userId)
+
+                // Update username, email, dan password pada Realtime Database
+                userRef.child("username").setValue(newUsername)
+                userRef.child("email").setValue(newEmail)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                requireContext(),
+                                "Data updated successfully.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                requireContext(),
+                                "Failed to update data.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+            }
         }
 
         binding.btnLogout.setOnClickListener {
@@ -79,5 +111,4 @@ class ProfileFragment : Fragment() {
             database.child("users").child(userId).removeEventListener(userListener)
         }
     }
-
 }

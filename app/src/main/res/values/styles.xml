@@ -24,4 +24,9 @@
         <item name="fontFamily">@font/bevietnam_regular</item>
         <item name="android:textSize">@dimen/text_14sp</item>
     </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+
 </resources>

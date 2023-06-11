@@ -52,7 +52,7 @@
     <string name="aeropress_judul"><b>AEROPRESS COFFEE BREWING</b></string>
     <string name="timer">2:30 Mins</string>
     <string name="frenchpress_judul">French Press</string>
-    <string name="fav_judul">Favourite</string>
+    <string name="fav_judul">Favorite</string>
     <string name="myRecipe_judul">My Recipe</string>
 
 </resources>

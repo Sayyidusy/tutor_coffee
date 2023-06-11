@@ -1,6 +1,5 @@
 package com.example.tutorcoffee
 
-import HomeFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,14 +26,11 @@ class MainActivity : AppCompatActivity() {
             replaceFragment(AddRecipesFragment())
         }
 
-
-
         auth = FirebaseAuth.getInstance()
-
         replaceFragment(HomeFragment())
 
-        binding.bottomNavigationView.setOnItemSelectedListener{
-            when(it.itemId){
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.favorite -> replaceFragment(FavoriteFragment())
 //                R.id.add_recipes -> replaceFragment(AddRecipesFragment())
@@ -51,8 +48,21 @@ class MainActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
+
+        if (fragment is HomeFragment) {
+            val username = intent.getStringExtra("username")
+            val homeFragment = HomeFragment()
+            val args = Bundle()
+            args.putString("username", username)
+            homeFragment.arguments = args
+            fragmentTransaction.replace(R.id.frame_layout, homeFragment)
+        } else {
+            fragmentTransaction.replace(R.id.frame_layout, fragment)
+        }
+
         fragmentTransaction.commit()
     }
+
+
 
 }
