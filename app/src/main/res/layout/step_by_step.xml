@@ -311,7 +311,7 @@
                 android:layout_height="@dimen/height_64dp"
                 android:background="@drawable/input_drop"
                 android:fontFamily="@font/bevietnam_bold"
-                android:text="Next Step"
+                android:text="Finish"
                 android:textColor="@color/cream_primary"
                 android:textSize="@dimen/text_18sp" />
         </LinearLayout>
