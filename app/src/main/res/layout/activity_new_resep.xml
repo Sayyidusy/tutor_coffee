@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/cream_bg"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- header-->
+            <View
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_64dp"
+                android:background="@drawable/top_nav"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/header"
+                app:layout_constraintVertical_bias="0.4"
+                app:srcCompat="@drawable/arrow_back" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/favorite"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:button="@drawable/selector_fav_item"
+                app:layout_constraintBottom_toBottomOf="@+id/header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/header" />
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aeropress Tutorial"
+                android:textColor="@color/cream_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/header" />
+
+
+            <!--            coffee-->
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconAlat"
+                android:layout_width="@dimen/width_40dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/coffee_bean_foreground"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <TextView
+                android:id="@+id/namaResep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Coffee"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintStart_toEndOf="@+id/iconAlat"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="10 gr"
+                android:textColor="@color/orange_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <!--            water-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconAir"
+                android:layout_width="@dimen/width_40dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/water_drop_foreground"
+                app:layout_constraintBottom_toTopOf="@+id/dividerWater"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/waterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Water"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerWater"
+                app:layout_constraintStart_toEndOf="@+id/iconAir"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/waterAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="10 ml"
+                android:textColor="@color/orange_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerWater"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <View
+                android:id="@+id/dividerWater"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <!--            temperature-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconThermo"
+                android:layout_width="@dimen/width_40dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/thermometer_foreground"
+                app:layout_constraintBottom_toTopOf="@+id/dividerTemperature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
+
+            <TextView
+                android:id="@+id/tempText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Temperature"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerTemperature"
+                app:layout_constraintStart_toEndOf="@+id/iconThermo"
+                app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
+
+            <TextView
+                android:id="@+id/tempAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="10 c"
+                android:textColor="@color/orange_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerTemperature"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
+
+            <View
+                android:id="@+id/dividerTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
+
+            <!--            method-->
+            <TextView
+                android:id="@+id/methodTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Method"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerMethod"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTemperature" />
+
+            <TextView
+                android:id="@+id/methodType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Aeropress"
+                android:textColor="@color/orange_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerMethod"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTemperature" />
+
+            <View
+                android:id="@+id/dividerMethod"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTemperature" />
+
+            <!--            range of grind-->
+
+            <TextView
+                android:id="@+id/rangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Range Of Grind"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerRange"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerMethod" />
+
+            <TextView
+                android:id="@+id/rangeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Medium"
+                android:textColor="@color/orange_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerRange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerMethod" />
+
+            <View
+                android:id="@+id/dividerRange"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerMethod" />
+
+            <!--            prep time-->
+
+            <TextView
+                android:id="@+id/prepText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Preparation Time"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerPrep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerRange" />
+
+            <TextView
+                android:id="@+id/prepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="4:30"
+                android:textColor="@color/orange_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerPrep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerRange" />
+
+            <View
+                android:id="@+id/dividerPrep"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerRange" />
+
+            <!--            step by step-->
+            <TextView
+                android:id="@+id/stepText"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Step By Step"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerPrep" />
+
+            <!--            step 1-->
+            <TextView
+                android:id="@+id/step1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="1. Grind 10 g of coffee (Medium - Coarse)"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stepText" />
+
+            <View
+                android:id="@+id/dividerStep1"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step1Text" />
+
+            <!--            step 2-->
+
+            <TextView
+                android:id="@+id/step2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="2. Add 10 gram of Coffee"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerStep2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep1" />
+
+            <View
+                android:id="@+id/dividerStep2"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep1" />
+
+            <!--            step 3-->
+
+            <TextView
+                android:id="@+id/step3Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="3. Add 10ml of Water"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerStep3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep2" />
+
+            <View
+                android:id="@+id/dividerStep3"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep2" />
+
+            <!--            step 4-->
+
+            <TextView
+                android:id="@+id/step4Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="4.Bloom"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerStep4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep3" />
+
+            <View
+                android:id="@+id/dividerStep4"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep3" />
+
+            <!--            step 5-->
+
+            <TextView
+                android:id="@+id/step5Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="5. Brew"
+                android:textColor="@color/dark_cream"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerStep5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep4" />
+
+            <View
+                android:id="@+id/dividerStep5"
+                android:layout_width="match_parent"
+                android:layout_height="0.87dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/orange_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep4" />
+
+            <!--            button make coffee-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonMakeCoffee"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_button_make_coffee"
+                android:text="Make Coffee"
+                android:textColor="@color/cream_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerStep5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
