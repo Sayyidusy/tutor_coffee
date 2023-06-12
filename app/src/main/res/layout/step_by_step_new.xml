@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/cream_bg"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_64dp"
+        android:background="@drawable/top_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/arrow_back" />
+
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Your Coffee"
+        android:textColor="@color/cream_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toStartOf="@+id/add"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="-118dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="@dimen/margin_80dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card"
+                        android:layout_width="360dp"
+                        android:layout_height="400dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginHorizontal="@dimen/margin_8dp"
+                        android:padding="@dimen/margin_8dp"
+                        app:cardBackgroundColor="@color/dark_cream"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_8dp"
+                            app:srcCompat="@mipmap/grind_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grind 10Gr of Coffee(Medium)"
+                        android:fontFamily="@font/bevietnam_bold"
+                        android:textSize="@dimen/text_18sp"
+                        android:layout_marginStart="70dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="360dp"
+                        android:layout_height="400dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginHorizontal="@dimen/margin_8dp"
+                        android:padding="@dimen/margin_8dp"
+                        app:cardBackgroundColor="@color/dark_cream"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_8dp"
+                            app:srcCompat="@mipmap/rinse_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rinse Filter"
+                        android:fontFamily="@font/bevietnam_bold"
+                        android:textSize="@dimen/text_18sp"
+                        android:layout_marginStart="180dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/card2" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="360dp"
+                        android:layout_height="400dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginHorizontal="@dimen/margin_8dp"
+                        android:padding="@dimen/margin_8dp"
+                        app:cardBackgroundColor="@color/dark_cream"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_8dp"
+                            app:srcCompat="@mipmap/add_coffee_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add 10 Gr of Coffee"
+                        android:fontFamily="@font/bevietnam_bold"
+                        android:textSize="@dimen/text_18sp"
+                        android:layout_marginStart="250dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/card3" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="360dp"
+                        android:layout_height="400dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginHorizontal="@dimen/margin_8dp"
+                        android:padding="@dimen/margin_8dp"
+                        app:cardBackgroundColor="@color/dark_cream"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_8dp"
+                            app:srcCompat="@mipmap/add_water_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add 10ml of Water"
+                        android:fontFamily="@font/bevietnam_bold"
+                        android:textSize="@dimen/text_18sp"
+                        android:layout_marginStart="220dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/card4" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card5"
+                        android:layout_width="360dp"
+                        android:layout_height="400dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginHorizontal="@dimen/margin_8dp"
+                        android:padding="@dimen/margin_8dp"
+                        app:cardBackgroundColor="@color/dark_cream"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card4"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_8dp"
+                            app:srcCompat="@mipmap/bloomc_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bloom 30s"
+                        android:fontFamily="@font/bevietnam_bold"
+                        android:textSize="@dimen/text_18sp"
+                        android:layout_marginStart="250dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/card5" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card7"
+                        android:layout_width="360dp"
+                        android:layout_height="400dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginHorizontal="@dimen/margin_8dp"
+                        android:padding="@dimen/margin_8dp"
+                        app:cardBackgroundColor="@color/dark_cream"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card5"
+
+                        tools:layout_editor_absoluteX="2302dp">
+
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_8dp"
+                            app:srcCompat="@mipmap/add_water_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bevietnam_bold"
+                        android:text="Add 10ml of Water"
+                        android:layout_marginStart="230dp"
+                        android:textSize="@dimen/text_18sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card7"
+                         />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </HorizontalScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="@dimen/width_265dp"
+                android:layout_height="@dimen/height_64dp"
+                android:background="@drawable/input_drop"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Finish"
+                android:textColor="@color/cream_primary"
+                android:textSize="@dimen/text_18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
