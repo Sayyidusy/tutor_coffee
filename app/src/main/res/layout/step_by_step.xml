@@ -306,7 +306,7 @@
             </HorizontalScrollView>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
+                android:id="@+id/button_finish"
                 android:layout_width="@dimen/width_265dp"
                 android:layout_height="@dimen/height_64dp"
                 android:background="@drawable/input_drop"

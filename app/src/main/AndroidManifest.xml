@@ -30,6 +30,9 @@
         <activity android:name=".ListResepActivity" />
         <activity android:name=".aero.DetailResepAero" />
         <activity android:name=".step.MainActivityStep"/>
+        <activity android:name=".addstep.AddStepActivity"/>
+        <activity android:name=".addstep.ResultAddRecipesActivity"/>
+        <activity android:name=".addresep.NewResepActivity"/>
     </application>
 
 </manifest>

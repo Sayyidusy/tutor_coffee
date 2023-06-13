@@ -110,6 +110,7 @@
                 android:background="@drawable/input"
                 android:ems="10"
                 android:inputType="text"
+                android:hint="10"
                 android:padding="@dimen/text_12sp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toTopOf="@+id/view"
@@ -154,6 +155,7 @@
                 android:layout_height="@dimen/margin_44dp"
                 android:background="@drawable/input"
                 android:ems="10"
+                android:hint="10"
                 android:inputType="text"
                 android:padding="@dimen/text_12sp"
                 android:layout_marginEnd="8dp"
@@ -201,6 +203,7 @@
                 android:background="@drawable/input"
                 android:layout_marginEnd="8dp"
                 android:ems="10"
+                android:hint="10"
                 android:inputType="text"
                 android:padding="@dimen/text_12sp"
                 app:layout_constraintBottom_toTopOf="@+id/view3"
@@ -334,12 +337,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:fontFamily="@font/bevietnam_bold"
-                android:text="Step 1"
+                android:text="Grind Coffee"
+                android:textColor="@color/dark_cream"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toTopOf="@+id/step2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step" />
+
+            <TextView
+                android:id="@+id/step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/bevietnam_bold"
+                android:text="Step 2"
                 android:textColor="@color/dark_cream"
                 android:textSize="@dimen/text_14sp"
                 app:layout_constraintBottom_toTopOf="@+id/view7"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/step" />
+                app:layout_constraintTop_toBottomOf="@+id/step1" />
+
+            <ImageView
+                android:id="@+id/tambah_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_15dp"
+                android:background="@drawable/input_drop"
+                app:layout_constraintBottom_toTopOf="@+id/view7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/step2"
+                app:srcCompat="@drawable/ic_add" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/add_more_step"
@@ -355,7 +382,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/view7" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/create_recipe"
+                android:id="@+id/create"
                 android:textColor="@color/white"
                 android:layout_width="@dimen/width_265dp"
                 android:layout_height="@dimen/width_40dp"
@@ -367,15 +394,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_more_step" />
 
-            <ImageView
-                android:id="@+id/tambah_step"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_15dp"
-                android:background="@drawable/input_drop"
-                app:layout_constraintBottom_toTopOf="@+id/view7"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/ic_add" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
