@@ -119,6 +119,7 @@
         android:padding="@dimen/corner_8dp"
         android:textColor="#8e8e8e"
         app:layout_constraintBottom_toTopOf="@+id/tv_confirm_password"
+        app:layout_constraintEnd_toEndOf="@+id/et_Email"
         app:layout_constraintStart_toStartOf="@+id/tv_password" />
 
     <TextView
@@ -147,6 +148,7 @@
         android:padding="@dimen/corner_8dp"
         android:textColor="#8e8e8e"
         app:layout_constraintBottom_toTopOf="@+id/btn_signup"
+        app:layout_constraintEnd_toEndOf="@+id/et_Password"
         app:layout_constraintStart_toStartOf="@+id/tv_confirm_password" />
 
     <androidx.appcompat.widget.AppCompatButton
